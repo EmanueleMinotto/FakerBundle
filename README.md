@@ -34,13 +34,12 @@ class AppKernel extends Kernel
     {
         $bundles = array(
             // ...
-
-            new EmanueleMinotto\FakerBundle\FakerBundle(),
         );
 
-        // ...
+        if (...) {
+            // ...
+            $bundles[] = new EmanueleMinotto\FakerBundle\FakerBundle();
+        }
     }
-
-    // ...
 }
 ```
