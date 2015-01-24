@@ -36,8 +36,8 @@ class FakerExtensionTest extends PHPUnit_Framework_TestCase
      */
     public function testService()
     {
-        $this->assertTrue($this->container->has('em.faker'));
-        $this->assertInstanceOf('Faker\\Generator', $this->container->get('em.faker'));
+        $this->assertTrue($this->container->has('faker'));
+        $this->assertInstanceOf('Faker\\Generator', $this->container->get('faker'));
     }
 
     /**
@@ -45,6 +45,6 @@ class FakerExtensionTest extends PHPUnit_Framework_TestCase
      */
     public function testParameter()
     {
-        $this->assertTrue($this->container->hasParameter('em.faker.locale'));
+        $this->assertTrue($this->container->hasParameter('faker.locale'));
     }
 }
