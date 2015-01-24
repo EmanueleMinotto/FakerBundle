@@ -23,13 +23,9 @@ class ProviderCompilerPass implements CompilerPassInterface
         }
 
         $definition = $container->getDefinition('faker');
+        $providers = $container->findTaggedServiceIds('faker.provider');
 
-        foreach ($container->findTaggedServiceIds('faker.provider') as $id => $attributes) {
-            $providerDefinition = $container->getDefinition($id);
-            $providerDefinition->setArguments(array(
-                new Reference('faker'),
-            ));
-
+        foreach ($providers as $id => $attributes) {
             $definition->addMethodCall('addProvider', array(
                 new Reference($id),
             ));
