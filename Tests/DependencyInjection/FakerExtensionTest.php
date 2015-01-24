@@ -7,8 +7,6 @@ use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
- * @author Emanuele Minotto <minottoemanuele@gmail.com>
- *
  * @coversDefaultClass \EmanueleMinotto\FakerBundle\DependencyInjection\FakerExtensionTest
  */
 class FakerExtensionTest extends PHPUnit_Framework_TestCase
