@@ -10,7 +10,7 @@
             "EmanueleMinotto\\FakerBundle\\": "."
         }
     },
-    "description": "Faker Bundle",
+    "description": "Bundle for Symfony 2 providing the Faker library",
     "license": "MIT",
     "name": "emanueleminotto/faker-bundle",
     "require": {
