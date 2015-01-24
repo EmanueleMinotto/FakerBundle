@@ -1,4 +1,4 @@
-Installation
+Faker Bundle [![Build Status](https://travis-ci.org/EmanueleMinotto/FakerBundle.svg)](https://travis-ci.org/EmanueleMinotto/FakerBundle)
 ============
 
 Bundle for Symfony 2 providing the [Faker](https://github.com/fzaninotto/Faker) library.
@@ -10,7 +10,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```bash
-$ composer require emanueleminotto/faker-bundle "~1"
+$ composer require emanueleminotto/faker-bundle
 ```
 
 This command requires you to have Composer installed globally, as explained
