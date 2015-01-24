@@ -13,6 +13,9 @@ use Symfony\Component\DependencyInjection\Reference;
  */
 class ProviderCompilerPass implements CompilerPassInterface
 {
+    /**
+     * {@inheritdoc}
+     */
     public function process(ContainerBuilder $container)
     {
         if (false === $container->hasDefinition('faker')) {
