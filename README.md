@@ -1,6 +1,8 @@
 Installation
 ============
 
+Bundle for Symfony 2 providing the [Faker](https://github.com/fzaninotto/Faker) library.
+
 Step 1: Download the Bundle
 ---------------------------
 
