@@ -7,9 +7,5 @@
         <service class="Faker\Factory" factory-class="Faker\Factory" factory-method="create" id="faker">
             <argument>%faker.locale%</argument>
         </service>
-        <service class="EmanueleMinotto\FakerBundle\Twig\FakerGeneratorExtension" id="emanuele.minotto.faker.twig.extension" public="false">
-            <tag name="twig.extension"/>
-            <argument id="faker" type="service"/>
-        </service>
     </services>
 </container>
