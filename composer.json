@@ -19,5 +19,9 @@
     "require-dev": {
         "phpunit/phpunit": "~4.4",
         "symfony/framework-bundle": "~2.6"
+    },
+    "suggest": {
+        "frequenc1/newage-ipsum": "Provider for a new aged ipsum generator",
+        "fzaninotto/company-name-generator": "Provider used to generate names for english tech companies with class"
     }
 }
