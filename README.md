@@ -50,8 +50,9 @@ No more requirements, you can start using the `faker` service.
 
 Reading:
 
- * [Providers](https://github.com/EmanueleMinotto/FakerBundle/tree/master/Resources/doc/providers.rst)
  * [Configuration Reference](https://github.com/EmanueleMinotto/FakerBundle/tree/master/Resources/doc/configuration-reference.rst)
+ * [Providers](https://github.com/EmanueleMinotto/FakerBundle/tree/master/Resources/doc/providers.rst)
+ * [Twig Extension](https://github.com/EmanueleMinotto/FakerBundle/tree/master/Resources/doc/twig.rst)
 
 License
 -------
