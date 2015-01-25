@@ -2,9 +2,8 @@
 
 namespace EmanueleMinotto\FakerBundle\Tests\DependencyInjection;
 
-use EmanueleMinotto\FakerBundle\DependencyInjection\FakerExtension;
+use EmanueleMinotto\FakerBundle\Tests\AppKernel;
 use PHPUnit_Framework_TestCase;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  * @coversDefaultClass \EmanueleMinotto\FakerBundle\DependencyInjection\FakerExtensionTest
@@ -12,21 +11,17 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 class FakerExtensionTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @var \Symfony\Component\DependencyInjection\ContainerBuilder
+     * @var \Symfony\Component\HttpKernel\Kernel
      */
-    private $container;
+    private $kernel;
 
     /**
      * {@inheritdoc}
      */
     protected function setUp()
     {
-        $this->container = new ContainerBuilder();
-        $extension = new FakerExtension();
-
-        $this->container->registerExtension($extension);
-        $this->container->loadFromExtension($extension->getAlias());
-        $this->container->compile();
+        $this->kernel = new AppKernel('FakerExtensionTest', true);
+        $this->kernel->boot();
     }
 
     /**
@@ -34,8 +29,10 @@ class FakerExtensionTest extends PHPUnit_Framework_TestCase
      */
     public function testService()
     {
-        $this->assertTrue($this->container->has('faker'));
-        $this->assertInstanceOf('Faker\\Generator', $this->container->get('faker'));
+        $container = $this->kernel->getContainer();
+
+        $this->assertTrue($container->has('faker'));
+        $this->assertInstanceOf('Faker\\Generator', $container->get('faker'));
     }
 
     /**
@@ -43,6 +40,8 @@ class FakerExtensionTest extends PHPUnit_Framework_TestCase
      */
     public function testParameter()
     {
-        $this->assertTrue($this->container->hasParameter('faker.locale'));
+        $container = $this->kernel->getContainer();
+
+        $this->assertTrue($container->hasParameter('faker.locale'));
     }
 }
