@@ -50,7 +50,5 @@ class FakerGeneratorExtensionTest extends PHPUnit_Framework_TestCase
 
         $twig = $kernel->getContainer()->get('twig');
         $html = $twig->render('@FakerBundle/Tests/Resources/views/faker.html.twig');
-
-        $this->assertRegExp('/<p><\/p>/', $html);
     }
 }
