@@ -28,7 +28,7 @@ class Configuration implements ConfigurationInterface
             ->addDefaultsIfNotSet()
             ->children()
                 ->booleanNode('twig')
-                    ->defaultValue('false')
+                    ->defaultFalse()
                     ->info('Twig global variable')
                 ->end()
             ->end()

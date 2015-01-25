@@ -4,7 +4,7 @@
         <parameter key="faker.locale">en_US</parameter>
     </parameters>
     <services>
-        <service class="Faker\Factory" factory-class="Faker\Factory" factory-method="create" id="faker">
+        <service class="Faker\Generator" factory-class="Faker\Factory" factory-method="create" id="faker">
             <argument>%faker.locale%</argument>
         </service>
     </services>

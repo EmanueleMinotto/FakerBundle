@@ -2,8 +2,9 @@
 
 namespace EmanueleMinotto\FakerBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
 use EmanueleMinotto\FakerBundle\DependencyInjection\Compiler\ProviderCompilerPass;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * {@inheritdoc}

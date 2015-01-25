@@ -24,7 +24,6 @@ Then, enable the bundle by adding the following line in the `app/AppKernel.php`
 file of your project:
 
 ```php
-<?php
 // app/AppKernel.php
 
 // ...
