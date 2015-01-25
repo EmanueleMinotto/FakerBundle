@@ -42,3 +42,20 @@ class AppKernel extends Kernel
     }
 }
 ```
+
+Usage
+-----
+
+No more requirements, you can start using the `faker` service.
+
+Reading:
+
+ * [Providers](https://github.com/EmanueleMinotto/FakerBundle/tree/master/Resources/doc/providers.rst)
+ * [Configuration Reference](https://github.com/EmanueleMinotto/FakerBundle/tree/master/Resources/doc/configuration-reference.rst)
+
+License
+-------
+
+This bundle is under the MIT license. See the complete license in the bundle:
+
+    Resources/meta/LICENSE
