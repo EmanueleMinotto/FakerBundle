@@ -10,7 +10,7 @@ In this example the ``fzaninotto/company-name-generator`` will be added:
     services:
         faker.test_provider:
             class: CompanyNameGenerator\FakerProvider
-            public: false # useless is used alone
+            public: false # useless if used alone
             arguments:
             - @faker
             tags:
@@ -19,7 +19,7 @@ In this example the ``fzaninotto/company-name-generator`` will be added:
 after this step you can start using the new provider from the global ``faker`` service
 
 .. code-block:: php
-    
+
     public function testAction()
     {
         $faker = $this->get('faker');
