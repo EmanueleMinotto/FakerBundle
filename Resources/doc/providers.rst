@@ -1,7 +1,9 @@
 Providers
 ========================
 
-`Faker providers`_ can be added using services.
+`Faker providers`_ can be added using services and the ``faker.provider`` tag.
+
+Remember to add the ``faker`` service as unique argument of these services.
 
 In this example the ``fzaninotto/company-name-generator`` will be added:
 
@@ -11,10 +13,10 @@ In this example the ``fzaninotto/company-name-generator`` will be added:
         faker.test_provider:
             class: CompanyNameGenerator\FakerProvider
             public: false # useless if used alone
-            arguments:
-            - @faker
+            arguments: ['@faker']
             tags:
-            - { name: faker.provider }
+            - 
+                name: faker.provider
 
 after this step you can start using the new provider from the global ``faker`` service
 
