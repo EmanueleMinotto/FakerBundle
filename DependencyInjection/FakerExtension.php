@@ -35,6 +35,10 @@ class FakerExtension extends Extension
             $this->loadTwigExtension($container);
         }
 
+        if ($configs['locale']) {
+            $container->setParameter('faker.locale', $configs['locale']);
+        }
+
         $loader = new Loader\XmlFileLoader(
             $container,
             new FileLocator(__DIR__.'/../Resources/config')

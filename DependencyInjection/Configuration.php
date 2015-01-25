@@ -29,6 +29,9 @@ class Configuration implements ConfigurationInterface
                 ->booleanNode('twig')
                     ->defaultFalse()
                 ->end()
+                ->scalarNode('locale')
+                    ->defaultValue('%faker.locale%')
+                ->end()
             ->end()
         ;
 
