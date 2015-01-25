@@ -35,6 +35,7 @@ class FakerExtension extends Extension
             $this->loadTwigExtension($container);
         }
 
+        // if defined override the faker.locale parameter
         if ($configs['locale']) {
             $container->setParameter('faker.locale', $configs['locale']);
         }
@@ -48,8 +49,8 @@ class FakerExtension extends Extension
 
     /**
      * Loads the Twig global variable.
-     * 
-     * @param  ContainerBuilder $container
+     *
+     * @param ContainerBuilder $container
      */
     private function loadTwigExtension(ContainerBuilder $container)
     {
