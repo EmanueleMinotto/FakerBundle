@@ -24,12 +24,10 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('faker');
 
         $rootNode
-            ->info('Faker Bundle configuration')
             ->addDefaultsIfNotSet()
             ->children()
                 ->booleanNode('twig')
                     ->defaultFalse()
-                    ->info('Twig global variable')
                 ->end()
             ->end()
         ;
