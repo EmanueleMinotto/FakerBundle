@@ -11,6 +11,11 @@
         }
     },
     "description": "Bundle for Symfony 2 providing the Faker library",
+    "keywords": [
+        "faker",
+        "bundle",
+        "symfony"
+    ],
     "license": "MIT",
     "name": "emanueleminotto/faker-bundle",
     "require": {
