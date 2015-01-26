@@ -40,6 +40,11 @@ class FakerExtension extends Extension
             $container->setParameter('faker.locale', $configs['locale']);
         }
 
+        // if defined override the faker.seed parameter
+        if ($configs['seed']) {
+            $container->setParameter('faker.seed', $configs['seed']);
+        }
+
         $loader = new Loader\XmlFileLoader(
             $container,
             new FileLocator(__DIR__.'/../Resources/config')

@@ -43,5 +43,6 @@ class FakerExtensionTest extends PHPUnit_Framework_TestCase
         $container = $this->kernel->getContainer();
 
         $this->assertTrue($container->hasParameter('faker.locale'));
+        $this->assertTrue($container->hasParameter('faker.seed'));
     }
 }

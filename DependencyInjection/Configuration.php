@@ -31,6 +31,10 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('locale')
                     ->defaultValue('%faker.locale%')
                 ->end()
+                ->integerNode('seed')
+                    ->defaultValue('%faker.seed%')
+                    ->min(0)
+                ->end()
             ->end()
         ;
 
