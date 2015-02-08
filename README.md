@@ -1,7 +1,15 @@
-Faker Bundle [![Build Status](https://travis-ci.org/EmanueleMinotto/FakerBundle.svg)](https://travis-ci.org/EmanueleMinotto/FakerBundle)
+Faker Bundle
 ============
 
+[![Build Status](https://img.shields.io/travis/EmanueleMinotto/FakerBundle.svg?style=flat)](https://travis-ci.org/EmanueleMinotto/FakerBundle)
+[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/ec8a1a0c-1895-4de6-bbab-24ce11074e83.svg?style=flat)](https://insight.sensiolabs.com/projects/ec8a1a0c-1895-4de6-bbab-24ce11074e83)
+[![Coverage Status](https://img.shields.io/coveralls/EmanueleMinotto/FakerBundle.svg?style=flat)](https://coveralls.io/r/EmanueleMinotto/FakerBundle)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/EmanueleMinotto/FakerBundle.svg?style=flat)](https://scrutinizer-ci.com/g/EmanueleMinotto/FakerBundle/)
+[![Total Downloads](https://img.shields.io/packagist/dt/emanueleminotto/faker-bundle.svg?style=flat)](https://packagist.org/packages/emanueleminotto/faker-bundle)
+
 Bundle for Symfony 2 providing the [Faker](https://github.com/fzaninotto/Faker) library.
+
+API: [emanueleminotto.github.io/FakerBundle](http://emanueleminotto.github.io/FakerBundle/)
 
 Step 1: Download the Bundle
 ---------------------------
