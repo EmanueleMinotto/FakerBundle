@@ -6,7 +6,7 @@ use EmanueleMinotto\FakerBundle\Tests\AppKernel;
 use PHPUnit_Framework_TestCase;
 
 /**
- * @coversDefaultClass \EmanueleMinotto\FakerBundle\DependencyInjection\FakerExtensionTest
+ * @coversDefaultClass \EmanueleMinotto\FakerBundle\DependencyInjection\FakerExtension
  */
 class FakerExtensionTest extends PHPUnit_Framework_TestCase
 {
