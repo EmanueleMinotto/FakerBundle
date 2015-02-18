@@ -6,5 +6,5 @@ Default Bundle Configuration
     # app/config/config_dev.yml
     faker:
         twig: false
-        locale: '%faker.locale%' # default en_US
+        locale: 'en_US'
         seed: null

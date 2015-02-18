@@ -51,8 +51,7 @@ class ProviderCompilerPassTest extends PHPUnit_Framework_TestCase
         $methods = $this->container->getDefinition('faker')->getMethodCalls();
 
         $this->assertNotEmpty($methods);
-        // $methods[0] is the seed
-        $this->assertEquals('addProvider', $methods[1][0]);
-        $this->assertEquals('acme.faker.custom', $methods[1][1][0]);
+        $this->assertEquals('addProvider', $methods[0][0]);
+        $this->assertInstanceOf('Symfony\Component\DependencyInjection\Reference', $methods[0][1][0]);
     }
 }

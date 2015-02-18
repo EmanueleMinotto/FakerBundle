@@ -35,6 +35,12 @@ class FakerExtension extends Extension
             $this->loadTwigExtension($container);
         }
 
+        $loader = new Loader\XmlFileLoader(
+            $container,
+            new FileLocator(__DIR__.'/../Resources/config')
+        );
+        $loader->load('services.xml');
+
         // if defined override the faker.locale parameter
         if ($configs['locale']) {
             $container->setParameter('faker.locale', $configs['locale']);
@@ -45,11 +51,6 @@ class FakerExtension extends Extension
             $container->setParameter('faker.seed', $configs['seed']);
         }
 
-        $loader = new Loader\XmlFileLoader(
-            $container,
-            new FileLocator(__DIR__.'/../Resources/config')
-        );
-        $loader->load('services.xml');
         if (trim($container->getParameter('faker.seed'))) {
             $container->getDefinition('faker')->addMethodCall('seed', [
                 $container->getParameter('faker.seed'),

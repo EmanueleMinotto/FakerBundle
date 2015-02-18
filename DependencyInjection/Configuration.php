@@ -29,7 +29,7 @@ class Configuration implements ConfigurationInterface
                     ->defaultFalse()
                 ->end()
                 ->scalarNode('locale')
-                    ->defaultValue('%faker.locale%')
+                    ->defaultValue('en_US')
                 ->end()
                 ->integerNode('seed')
                     ->defaultNull()
