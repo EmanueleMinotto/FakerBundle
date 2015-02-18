@@ -32,7 +32,11 @@ class FakerExtensionTest extends PHPUnit_Framework_TestCase
         $container = $this->kernel->getContainer();
 
         $this->assertTrue($container->has('faker'));
-        $this->assertInstanceOf('Faker\\Generator', $container->get('faker'));
+
+        $faker = $container->get('faker');
+        $this->assertInstanceOf('Faker\\Generator', $faker);
+
+        $this->assertNotSame($faker->randomNumber, $faker->randomNumber);
     }
 
     /**
@@ -44,5 +48,19 @@ class FakerExtensionTest extends PHPUnit_Framework_TestCase
 
         $this->assertTrue($container->hasParameter('faker.locale'));
         $this->assertTrue($container->hasParameter('faker.seed'));
+    }
+
+    /**
+     * @covers ::load
+     */
+    public function testSeedParameter()
+    {
+        $kernel = new AppKernel('FakerExtensionTest_testSeedParameter', true);
+        $kernel->boot();
+
+        $faker = $kernel->getContainer()->get('faker');
+
+        $this->assertSame('Miss Lorna Dibbert', $faker->name);
+        $this->assertSame('Litzy Emard', $faker->name);
     }
 }

@@ -50,6 +50,11 @@ class FakerExtension extends Extension
             new FileLocator(__DIR__.'/../Resources/config')
         );
         $loader->load('services.xml');
+        if (trim($container->getParameter('faker.seed'))) {
+            $container->getDefinition('faker')->addMethodCall('seed', [
+                $container->getParameter('faker.seed'),
+            ]);
+        }
     }
 
     /**

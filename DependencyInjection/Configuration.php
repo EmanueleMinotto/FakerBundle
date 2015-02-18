@@ -32,7 +32,7 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue('%faker.locale%')
                 ->end()
                 ->integerNode('seed')
-                    ->defaultValue('%faker.seed%')
+                    ->defaultNull()
                     ->min(0)
                 ->end()
             ->end()
