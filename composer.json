@@ -1,23 +1,19 @@
 {
-    "authors": [
-        {
-            "email": "minottoemanuele@gmail.com",
-            "name": "Emanuele Minotto"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "EmanueleMinotto\\FakerBundle\\": "."
-        }
-    },
+    "name": "emanueleminotto/faker-bundle",
     "description": "Bundle for Symfony 2 providing the Faker library",
     "keywords": [
-        "faker",
         "bundle",
+        "faker",
         "symfony"
     ],
     "license": "MIT",
-    "name": "emanueleminotto/faker-bundle",
+    "authors": [
+        {
+            "name": "Emanuele Minotto",
+            "email": "minottoemanuele@gmail.com",
+            "homepage": "http://www.emanueleminotto.it"
+        }
+    ],
     "require": {
         "fzaninotto/faker": "~1.4"
     },
@@ -29,5 +25,10 @@
     "suggest": {
         "frequenc1/newage-ipsum": "Provider for a new aged ipsum generator",
         "fzaninotto/company-name-generator": "Provider used to generate names for english tech companies with class"
+    },
+    "autoload": {
+        "psr-4": {
+            "EmanueleMinotto\\FakerBundle\\": "."
+        }
     }
 }
