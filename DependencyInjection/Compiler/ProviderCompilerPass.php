@@ -26,9 +26,9 @@ class ProviderCompilerPass implements CompilerPassInterface
         $providers = array_keys($container->findTaggedServiceIds('faker.provider'));
 
         foreach ($providers as $provider) {
-            $definition->addMethodCall('addProvider', array(
+            $definition->addMethodCall('addProvider', [
                 new Reference($provider),
-            ));
+            ]);
         }
     }
 }

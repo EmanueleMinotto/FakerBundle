@@ -67,9 +67,9 @@ class FakerExtension extends Extension
     {
         $service = new Definition(
             'EmanueleMinotto\FakerBundle\Twig\FakerGeneratorExtension',
-            array(
+            [
                 new Reference('faker'),
-            )
+            ]
         );
         $service->addTag('twig.extension');
         $service->setPublic(false);

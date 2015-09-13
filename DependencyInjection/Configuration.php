@@ -35,8 +35,7 @@ class Configuration implements ConfigurationInterface
                     ->defaultNull()
                     ->min(0)
                 ->end()
-            ->end()
-        ;
+            ->end();
 
         return $treeBuilder;
     }
