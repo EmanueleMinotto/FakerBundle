@@ -30,9 +30,9 @@ class FakerGeneratorExtension extends Twig_Extension
      */
     public function getGlobals()
     {
-        return array(
+        return [
             'faker' => $this->generator,
-        );
+        ];
     }
 
     /**

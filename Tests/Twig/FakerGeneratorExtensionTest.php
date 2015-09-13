@@ -3,7 +3,6 @@
 namespace EmanueleMinotto\FakerBundle\Tests\Twig;
 
 use EmanueleMinotto\FakerBundle\Tests\AppKernel;
-use EmanueleMinotto\FakerBundle\Twig\FakerGeneratorExtension;
 use PHPUnit_Framework_TestCase;
 
 /**
